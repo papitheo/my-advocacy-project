@@ -1,0 +1,510 @@
+/*Universal selector. Applies the properties in the curly braces to  the entire html file.*/
+* {
+  padding: 0;
+  margin: 0;
+  /*specifies how the width and height of an element is calculated. Particularly, with relation to the padding and padding. it simplifies the calculation of element sizes and ensures that padding and border do not cause unexpected layout issues.*/
+  box-sizing: border-box;
+}
+
+/*A universal selector which specifies a common(custom default) font-size  and font-family through out you html file*/
+html {
+  font-size: 10px;
+  font-family: 'Segoe UI', 'Tahoma', Geneva, Verdana, sans-serif;
+}
+
+/*Link selector. Use to custom design and specify element to out links  */
+a {
+  text-decoration: none;
+}
+
+/*  */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Category {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#Header {
+  position: fixed;
+  height: auto;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+#Header .header-container {
+  min-height: 8vh;
+  background-color: rgba(31, 30, 30, 0.24);
+}
+
+/*Navigation bar section*/
+#Header .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px;
+  max-width: 1300px;
+  list-style-type: none;
+  overflow: hidden;
+
+
+}
+
+#Header .navBar ul {
+  position: initial;
+  display: block;
+  height: auto;
+  text-decoration: none;
+}
+
+#Header .navBar ul li {
+  display: inline-block;
+  padding: 10px 40px;
+}
+
+#Header .navBar ul li {
+  font-size: 1.8rem;
+}
+
+#Header .navBar ul li a {
+  color: #fff;
+  font-weight: 500;
+}
+
+#Header .navBar h1 {
+  color: #fff;
+  font-weight: 500;
+}
+
+#Header .navBar ul li a:hover {
+  color: green;
+}
+
+#Header .navList button{
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #000000;
+}
+
+/* End of Navigation bar section*/
+
+/* Hero Section */
+#hero {
+  /*  image url key-value pair*/
+  background-image: url(./img/vegies.jpg);
+  /*  adjust the image to fit onto the entire screen*/
+  background-size: cover;
+  /*positions the background image at the top of the containing element and horizontally centering it. */
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .7;
+  z-index: -1;
+}
+
+#hero h1 {
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  position: relative;
+  color: white;
+}
+
+#hero .cta {
+  display: inline-block;
+  padding: 10px 30px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid green;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+#hero .cta:hover {
+  background-color: green;
+}
+
+/*  End of Hero Section*/
+
+/*Category Section*/
+.categoryTitle {
+  margin: 20px;
+  font-size: 30px;
+  font-family: "sans-serif";
+  text-align: center;
+}
+
+.product-list {
+  flex-direction: column;
+}
+
+.img-custom {
+  height: 200px;
+  width: 150px;
+}
+
+.subHeader {
+  font-weight: lighter;
+  font-size: small;
+  color: gray;
+  margin: 10px;
+}
+
+.flexcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+
+.containerb {
+  width: 300px;
+  /* Set the width of the container */
+  border: 1px solid green;
+  /* Add a border to the container */
+  padding: 10px;
+  /* Add padding inside the container */
+  margin: 50px;
+  /* Add margin around the container */
+  text-align: center;
+  /* Center-align the content within the container */
+}
+
+.containerbc {
+  max-width: 100%;
+  border: 1px solid green;
+  padding: 20px;
+  margin: 20px;
+}
+
+.containerbc img {
+  max-width: 100%;
+  height: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+.containerb img {
+  max-width: 100%;
+  /* Ensure the image doesn't exceed the container width */
+  height: auto;
+  /* Maintain aspect ratio of the image */
+}
+
+.containerb p {
+  font-size: 16px;
+  /* Set the font size for the text */
+  margin-top: 10px;
+  /* Add space between the image and text */
+}
+
+.disaplayStyle {
+  display: flex;
+  justify-content: center;
+}
+
+/*End of Category Section*/
+
+
+
+#h1font h1 {
+  font-size: 50px;
+  font-family: "sans-serif";
+  text-align: center;
+}
+
+#h3font h3 {
+  font-size: 30px;
+  font-family: "sans-serif";
+  text-align: center;
+}
+
+a:visited {
+  color: purple;
+}
+
+#Category h3 {
+  font-size: 30px;
+  font-family: sans-serif, "rubik";
+  text-align: center;
+}
+
+#Video {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin:10px;
+  padding:10px;
+  border-radius: 10px;
+  border: 2px solid green;
+}
+
+#Video .vid-container{
+  display:flex;
+  flex-wrap: wrap;
+  border:2px solid green;
+  border-radius: 10px;
+  padding:10px;
+  margin:10px;
+}
+
+#Video .vid-container iframe{
+  width:100%;
+  border-radius:10px;
+}
+
+#theme-button {
+  background-color: #fff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#theme-button:hover {
+  background-color: #006400;
+}
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
+/*start Petition*/
+.petition-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100;
+  padding-bottom: 50px;
+  padding-left: 10px;
+}
+
+.petition-title{
+  width: 55%;
+  padding-left: 10px;
+  font-family: "sans-serif";
+  font-size: 30px;
+}
+
+.petition-para{
+  width: 55%;
+  padding-top: 30px;
+  padding-right: 10px;
+  font-family: "sans-serif";
+  font-size: 30px;
+}
+
+.signatures{
+  padding-top: 30px;
+  width: 45%;
+  padding-right: 10px;
+  font-family: "sans-serif";
+  font-size: 30px;
+}
+
+.signature-icon {
+  margin-right: 5px;
+}
+/* End Petition*/
+
+
+
+/* Add to CSS file */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background: pink;
+}
+
+
+
+/* Apply general styling to the form */
+#petition{
+  padding-left: 20px;
+}
+
+/* Style labels */
+#petition label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333; /* Adjust the color as needed */
+}
+
+/* Style text fields and textarea */
+#petition input[type="text"],
+#petition input[type="email"],
+#petition textarea {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 1px solid #ccc; /* Adjust the border color as needed */
+  border-radius: 4px; /* Add rounded corners */
+}
+
+/* Style the Sign Now button */
+#petition button {
+  background-color: #4CAF50; /* Adjust the background color as needed */
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px; /* Add rounded corners */
+  margin-bottom: 20px;
+}
+
+/* Style placeholders */
+#petition input::placeholder,
+#petition textarea::placeholder {
+  color: #999; /* Adjust the placeholder color as needed */
+}
+
+#counter{
+  font-family: "sans-serif";
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+#Categories .pro-1{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid green;
+  margin:10px 10px;
+  text-align:center;
+  flex:block;  
+}
+
+#Deals .pro-1{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid green;
+  margin:10px 10px;
+  text-align:center;
+  flex:block;  
+}
+
+#Products .pro-1{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid green;
+  margin:10px 10px;
+  text-align:center;
+  flex:block;  
+}
+
+#News .pro-1{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid green;
+  margin:10px 10px;
+  text-align:center;
+  flex:block;  
+}
+
+#Article .pro-1{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid green;
+  margin:10px 10px;
+  text-align:center;
+  flex:block;  
+}
+
+#Categories .pro-1 img{
+    width:100%;
+    border-radius:10px;
+  }
+
+#Deals .pro-1 img{
+    width:100%;
+    border-radius:10px;
+  }
+
+#Deals .pro-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#Deals .pro-1 .description{
+  font-family:"sans-serif";
+  font-size: 20px;
+  text-align:start;
+}
+
+#Categories .pro-1 .description{
+  font-family:"sans-serif";
+  font-size: 20px;
+  text-align:start;
+}
+#Categories .pro-container{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+:root {
+  --transition-duration: 2s;
+  --transition-delay: 0s;
+  --transition-property: all;
+  --transition-timing-function: ease;
+}
+
+
+.revealable{
+  position : relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: var(--transition-duration) var(--transition-property) var(--transition-timing-function) var(--transition-delay);
+}
+
+.revealable.active {
+  transform: translateY(0);
+  opacity: 1;
+}
